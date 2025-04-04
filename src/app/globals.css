@@ -4,7 +4,6 @@
 .swiper-button-prev,
 .swiper-button-next {
   color: #feda8e;
-  @apply hidden lg:block;
 }
 
 .swiper-pagination-bullet {
@@ -13,4 +12,11 @@
 
 .swiper-pagination-bullet-active {
   background-color: gray;
+}
+
+@media screen and (min-width: 768px) {
+  .swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
 }
