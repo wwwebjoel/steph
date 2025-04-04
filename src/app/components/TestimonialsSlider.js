@@ -35,7 +35,7 @@ const testimonials = [
 
 const TestimonialSlider = () => {
   return (
-    <div className="max-w-[800px] mx-auto py-10 px-5 flex">
+    <div className="max-w-[800px] mx-auto py-10 px-5 flex cursor-grab">
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={30}
