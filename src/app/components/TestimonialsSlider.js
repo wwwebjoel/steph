@@ -1,4 +1,3 @@
-// components/TestimonialSlider.js
 'use client'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -9,7 +8,8 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
-import './testimonial.css' // Optional: for custom styles
+import '../../app/globals.css'
+
 
 const testimonials = [
   {
@@ -35,7 +35,7 @@ const testimonials = [
 
 const TestimonialSlider = () => {
   return (
-    <div className="testimonial-container">
+    <div className="max-w-[800px] mx-auto py-10 px-5 flex">
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={30}
@@ -46,13 +46,13 @@ const TestimonialSlider = () => {
       >
         {testimonials.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="testimonial-slide">
+            <div className="flex flex-col items-center justify-center h-full rounded-2xl px-5 lg:px-12 text-lg leading-relaxed text-center shadow-[0_0_20px_rgba(0,0,0,0.05)]">
               <p>{item.text}</p>
               {item.image && (
                 <img
                   src={item.image}
                   alt={`testimonial-${index}`}
-                  className="testimonial-image"
+                  className="block max-w-[400px] w-full h-auto mt-5 object-contain mx-auto"
                 />
               )}
             </div>
