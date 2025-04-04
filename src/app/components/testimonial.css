@@ -1,0 +1,36 @@
+.testimonial-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .testimonial-slide {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .testimonial-slide img.testimonial-image {
+    display: block;
+    max-width: 400px;
+    height: auto;
+    margin: 20px auto 0;
+    object-fit: contain;
+  }
+  
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #feda8e;
+  }
+  
+  .swiper-pagination-bullet {
+    background: #feda8e;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: gray;
+  }
