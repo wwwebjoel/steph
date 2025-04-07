@@ -1,15 +1,14 @@
-'use client'
+"use client";
 
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination } from 'swiper/modules'
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 // Import Swiper styles
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-import '../../app/globals.css'
-
+import "../../app/globals.css";
 
 const testimonials = [
   {
@@ -18,7 +17,8 @@ const testimonials = [
     I don’t know HOW many times I said, “I love money and money loves me” — Found a penny in the dryer, kissed it and said “THANK YOU!”… found a dime in my closet, did the same! Every sale that came in on my phone today (yes, even for the $1 ones), I approached it with the utmost gratitude.
     
     THIS IS REAL, YOU GUYS!`,
-    image: 'https://assets.cdn.filesafe.space/pAkc6auY53VnEbQBpdr1/media/67ed9cfcf87cf876f1dae1d2.png',
+    image:
+      "https://assets.cdn.filesafe.space/pAkc6auY53VnEbQBpdr1/media/67ed9cfcf87cf876f1dae1d2.png",
   },
   {
     text: `I missed the after party. Couldn't open up the schedule this week. FYI, pound for pound this is MORE value than most people put into a $197–$297 program.`,
@@ -31,18 +31,23 @@ const testimonials = [
   {
     text: `I want to be back. Your energy is amazing. LIKE super power and it was JUST what I needed.`,
   },
-]
+];
 
 const TestimonialSlider = () => {
   return (
     <div className="max-w-[800px] mx-auto py-10 px-5 flex cursor-grab">
       <Swiper
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={30}
         slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
         loop={true}
+        autoplay={{
+          delay: 6000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
       >
         {testimonials.map((item, index) => (
           <SwiperSlide key={index}>
@@ -60,7 +65,7 @@ const TestimonialSlider = () => {
         ))}
       </Swiper>
     </div>
-  )
-}
+  );
+};
 
-export default TestimonialSlider
+export default TestimonialSlider;
